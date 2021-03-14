@@ -21,8 +21,10 @@
     </li>
     <li><a href="#vpn"> CONFIGURACIÓN VPN </a> 
         <ol>
-            <a href="#vpn1"><li>CREAR EL SERVIDOR VPN</li></a>
+            <a href="#vpn1"><li>CONEXIÓN CON LA MÁQUINA VIRTUAL</li></a>
+            <a href="#vpn2"><li>CREAR EL SERVIDOR VPN</li></a>
             <a href="#vpn3"><li>AGREGAR UN NUEVO CLIENTE </li></a>
+            <a href="#vpn4"><li>CONECTAR UN CLIENTE CON LA VPN </li></a>
         </ol>
     </li>
 </ol>
@@ -147,3 +149,57 @@ Aplicaremos nuestras reglas en la pestaña 'Herramientas de red'->'Etiquetas de 
 Por ultimo daremos click en la opción 'Crear' para crear nuestra nueva Instancia.
 
 ## <div id="vpn"> 4. INSTALACIÓN DE VPN </div>
+
+### <div id="vpn1"> 4.1 CONEXIÓN CON LA MÁQUINA VIRTUAL </div>
+
+Google Cloud Plataform nos ofrece la opción de conectarnos a la consola de la Máquina Virtual mediante ssh. Esta opcción la podemos entcontrar en 'Instancias de VM'.
+
+![vpn_1](./Imagenes/vpn/vpn_1.png)
+
+
+
+### <div id="vpn2"> 4.2 CREAR EL SERVIDOR VPN </div>
+Por medio de la conexión a la Máquina Virtual podemos acceder a la concosla de Ubuntu.  
+Empezaremos actualizando las librerias de Ubuntu con el comando.  
+
+~~~
+sudo apt-get update 
+~~~
+
+Ejecutaremos las actualizaciones con:  
+
+~~~
+sudo apt-get upgrade
+~~~
+
+Ejecutaremos el script de la instalcción del servidor VPN en la siguiente dirección y ejecutaremos el programa.  
+
+~~~
+sudo wget https://cubaelectronica.com/OpenVPN/openvpn-install.sh && sudo bash openvpn-install.sh
+~~~
+Presionaremos enter para comenzar con la ejecución del programa.  
+
+![vpn_2](./Imagenes/vpn/vpn_2.png)
+
+Se mostrará la dirección IP privada (IP interna) y presionamos enter.  
+Ingresamos la dirección IP pública (IP externa) y presionamos Enter.  
+
+Estas pueden verse en 'Instancias de VM'.  
+Selecionaremos el protocolo UDP colocando 1 y daremos Enter.  
+
+![vpn_3](./Imagenes/vpn/vpn_3.png)
+
+Estableceremo el puerto 1194 y daremos enter.  
+![vpn_4](./Imagenes/vpn/vpn_4.png)
+
+Seleccionaremos como DNS a Google colocando 3 y daremos enter.
+![vpn_5](./Imagenes/vpn/vpn_5.png)
+
+Finalemente nos pedirá Ingresar el nombre de nuestro primer cliente.  
+![vpn_6](./Imagenes/vpn/vpn_6.png)
+
+Nos mostrará la ubicación de donde se ha generado la llave para que nuestro cliente se pueda conectar con la VPN.  
+![vpn_7](./Imagenes/vpn/vpn_7.png)
+
+
+### <div id="vpn2"> 4.2 CREAR EL SERVIDOR VPN </div>
