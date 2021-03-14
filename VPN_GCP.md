@@ -16,14 +16,14 @@
     </li>
     <li><a href="#mv"> MÁQUINA VIRTUAL (GCP)</a> 
         <ol>
-            <a href="#firewall"><li>REGLAS DE ENTRADA </li></a>
-            <a href="#firewall"><li>REGLAS DE SALIDA </li></a>
+            <a href="#mv1"><li>REGLAS DE ENTRADA </li></a>
+            <a href="#mv2"><li>REGLAS DE SALIDA </li></a>
         </ol>
     </li>
     <li><a href="#vpn"> CONFIGURACIÓN VPN </a> 
         <ol>
-            <a href="#firewall"><li>REGLAS DE ENTRADA </li></a>
-            <a href="#firewall"><li>REGLAS DE SALIDA </li></a>
+            <a href="#vpn1"><li>CREAR EL SERVIDOR VPN</li></a>
+            <a href="#vpn3"><li>AGREGAR UN NUEVO CLIENTE </li></a>
         </ol>
     </li>
 </ol>
@@ -57,12 +57,13 @@ Buscaremos al apartado de 'Red de VPC' -> 'Firewall' para agregar las nuevas reg
 
 ![firewall_1](./Imagenes/vpn_gcp/firewall_1.png)
 
+### <div id="firewall1"> 2.1 CARGAR NUEVA REGLA</div>
 Selecionaremos la opción de 'CARGAR REGLA DE FIREWAL'.  
 Usaremos esta opción para cargar las reglas de entrada y salida.  
 
 ![firewall_2](./Imagenes/vpn_gcp/firewall_2.png)
 
-### <div id="firewall"> 2.1 REGLAS DE ENTRADA</div>
+### <div id="firewall2"> 2.2 REGLAS DE ENTRADA</div>
 Ingresaremos un nuevo nombre para nuestra nueva regla (para fines de esta práctica se escogio el nombre de 'all-in' pero esta puede ser cambiada a conbeniencia del creador de la nueva regla). Además podemos agregar una descripción de nuestra nueva regla, este campo es opcional.  
 
 ![firewall_3](./Imagenes/vpn_gcp/firewall_3.png)
@@ -76,11 +77,17 @@ Ahora seleccionaremos como 'Dirección de tráfico'->'Entrada' y 'Acción en cas
 ![firewall_5](./Imagenes/vpn_gcp/firewall_5.png)
 
 En la opción 'Destinos'->'Etiquetas de destino especificadas' con el fin de aplicar estas reglas a la red de las Máquinas Virtuales únicamente que tengan en sus etiquetas de red el la etiquta definida en 'Etiquetas de destino' (para fines de esta práctica se eligio el nombre de 'openvpn'), es importante que tanto las reglas de entrada y salida tengan la misma etiqueta para que ambas reglas sean aplicadas en la red de la Máquina Virtual.  
-
+En 'Filtro Fuente'->'Rangos de IP' esto para poder limitar el rango clientes IP que queremos restringir para poder acceder a nuestra red VPN, este rango se definirá en 'Rangos de IP de origen' (a fines de esta práctica se permitió el acceso a todas las direcciones IP).  
 
 ![firewall_6](./Imagenes/vpn_gcp/firewall_6.png)
 
-### <div id="mv"> 2.2 REGLAS DE SALIDA  </div>
+Por ultimo se estbleció en 'Protocols and ports'->'udp: 1194'.  
+
+![firewall_7](./Imagenes/vpn_gcp/firewall_7.png)
+
+Se dió click en el botón 'Crear' para crear nuestra nueva regla de entrada.  
+
+### <div id="firewall3"> 2.3 REGLAS DE SALIDA  </div>
 Ingresaremos un nuevo nombre para nuestra nueva regla (para fines de esta práctica se escogio el nombre de 'all-out' pero esta puede ser cambiada a conbeniencia del creador de la nueva regla). Además podemos agregar una descripción de nuestra nueva regla, este campo es opcional.  
 
 ![firewall_3](./Imagenes/vpn_gcp/firewall_.png)
