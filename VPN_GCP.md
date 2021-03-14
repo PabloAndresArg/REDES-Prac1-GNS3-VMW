@@ -48,19 +48,51 @@ OpenVPN Connect es conpatible con:
 Es necesario de una cuenta activa en Google para poder registrarse en Google Cloud Platform. Google Cloud Platformm ofrece una capa gratuita, tras haber registrado una targeta de débito o crédito, la cual ofrece $300 como crédito y 3 meses de tiempo límite para ocupar la capa gratuita.  
 El servidor VPN se levantó sobre la capa gratuita que proporciona Google Cloud Platform.  
 
+> https://cloud.google.com/
 
 
 
 ## <div id="firewall"> 2. REGLAS DE FIREWALL </div>
 Buscaremos al apartado de 'Red de VPC' -> 'Firewall' para agregar las nuevas reglas.
 
-![firewall_1](./Imagenes/vpn_gcp/firewall_1.png){width='100px'}
+![firewall_1](./Imagenes/vpn_gcp/firewall_1.png)
+
+Selecionaremos la opción de 'CARGAR REGLA DE FIREWAL'.  
+Usaremos esta opción para cargar las reglas de entrada y salida.  
+
+![firewall_2](./Imagenes/vpn_gcp/firewall_2.png)
+
+### <div id="firewall"> 2.1 REGLAS DE ENTRADA</div>
+Ingresaremos un nuevo nombre para nuestra nueva regla (para fines de esta práctica se escogio el nombre de 'all-in' pero esta puede ser cambiada a conbeniencia del creador de la nueva regla). Además podemos agregar una descripción de nuestra nueva regla, este campo es opcional.  
+
+![firewall_3](./Imagenes/vpn_gcp/firewall_3.png)
+
+A fines de esta práctica dejaremos de las opciones de 'Registros', 'Red' y 'Prioridad' con los valores que vienen por defecto.  
+
+![firewall_4](./Imagenes/vpn_gcp/firewall_4.png)
+
+Ahora seleccionaremos como 'Dirección de tráfico'->'Entrada' y 'Acción en caso de coincidencia'->'Permitir'  
+
+![firewall_5](./Imagenes/vpn_gcp/firewall_5.png)
+
+En la opción 'Destinos'->'Etiquetas de destino especificadas' con el fin de aplicar estas reglas a la red de las Máquinas Virtuales únicamente que tengan en sus etiquetas de red el la etiquta definida en 'Etiquetas de destino' (para fines de esta práctica se eligio el nombre de 'openvpn'), es importante que tanto las reglas de entrada y salida tengan la misma etiqueta para que ambas reglas sean aplicadas en la red de la Máquina Virtual.  
 
 
+![firewall_6](./Imagenes/vpn_gcp/firewall_6.png)
 
-## <div id="mv"> 3. CREACIÓN DE UNA MÁQUINA VIRUTAL </div>
+### <div id="mv"> 2.2 REGLAS DE SALIDA  </div>
+Ingresaremos un nuevo nombre para nuestra nueva regla (para fines de esta práctica se escogio el nombre de 'all-out' pero esta puede ser cambiada a conbeniencia del creador de la nueva regla). Además podemos agregar una descripción de nuestra nueva regla, este campo es opcional.  
 
+![firewall_3](./Imagenes/vpn_gcp/firewall_.png)
 
+A fines de esta práctica dejaremos de las opciones de 'Registros', 'Red' y 'Prioridad' con los valores que vienen por defecto.  
 
+![firewall_4](./Imagenes/vpn_gcp/firewall_4.png)
 
-### <div id="vpn"> 4. INSTALACIÓN DE VPN </div>
+Ahora seleccionaremos como 'Dirección de tráfico'->'Salida' y 'Acción en caso de coincidencia'->'Permitir'  
+
+![firewall_5](./Imagenes/vpn_gcp/firewall_.png)
+
+## <div id="mv"> 3. MÁQUINA VIRTUAL (GCP)  </div>
+
+## <div id="vpn"> 4. INSTALACIÓN DE VPN </div>
