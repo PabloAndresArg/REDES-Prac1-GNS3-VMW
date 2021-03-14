@@ -42,7 +42,7 @@ OpenVPN Connect es conpatible con:
 - Linux
 - macOS
 - Android
-- Iphon
+- Iphone
 
 ### <div id="info2"> 1.2 GOOGLE CLUD PLATFORM </div>
 Es necesario de una cuenta activa en Google para poder registrarse en Google Cloud Platform. Google Cloud Platformm ofrece una capa gratuita, tras haber registrado una targeta de débito o crédito, la cual ofrece $300 como crédito y 3 meses de tiempo límite para ocupar la capa gratuita.  
@@ -90,7 +90,7 @@ Se dió click en el botón 'Crear' para crear nuestra nueva regla de entrada.
 ### <div id="firewall3"> 2.3 REGLAS DE SALIDA  </div>
 Ingresaremos un nuevo nombre para nuestra nueva regla (para fines de esta práctica se escogio el nombre de 'all-out' pero esta puede ser cambiada a conbeniencia del creador de la nueva regla). Además podemos agregar una descripción de nuestra nueva regla, este campo es opcional.  
 
-![firewall_3](./Imagenes/vpn_gcp/firewall_.png)
+![firewall_8](./Imagenes/vpn_gcp/firewall_8.png)
 
 A fines de esta práctica dejaremos de las opciones de 'Registros', 'Red' y 'Prioridad' con los valores que vienen por defecto.  
 
@@ -98,7 +98,18 @@ A fines de esta práctica dejaremos de las opciones de 'Registros', 'Red' y 'Pri
 
 Ahora seleccionaremos como 'Dirección de tráfico'->'Salida' y 'Acción en caso de coincidencia'->'Permitir'  
 
-![firewall_5](./Imagenes/vpn_gcp/firewall_.png)
+![firewall_9](./Imagenes/vpn_gcp/firewall_9.png)
+
+En la opción 'Destinos'->'Etiquetas de destino especificadas' con el fin de aplicar estas reglas a la red de las Máquinas Virtuales únicamente que tengan en sus etiquetas de red el la etiquta definida en 'Etiquetas de destino' (para fines de esta práctica se eligio el nombre de 'openvpn'), es importante que tanto las reglas de entrada y salida tengan la misma etiqueta para que ambas reglas sean aplicadas en la red de la Máquina Virtual.  
+En 'Filtro Fuente'->'Rangos de IP' esto para poder limitar el rango clientes IP que queremos restringir para poder acceder a nuestra red VPN, este rango se definirá en 'Rangos de IP de origen' (a fines de esta práctica se permitió el acceso a todas las direcciones IP).  
+
+![firewall_6](./Imagenes/vpn_gcp/firewall_6.png)
+
+Por ultimo se estbleció en 'Protocols and ports'->'udp: 1194'.  
+
+![firewall_7](./Imagenes/vpn_gcp/firewall_7.png)
+
+Se dió click en el botón 'Crear' para crear nuestra nueva regla de entrada. 
 
 ## <div id="mv"> 3. MÁQUINA VIRTUAL (GCP)  </div>
 
