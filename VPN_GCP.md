@@ -23,8 +23,8 @@
         <ol>
             <a href="#vpn1"><li>CONEXIÓN CON LA MÁQUINA VIRTUAL</li></a>
             <a href="#vpn2"><li>CREAR EL SERVIDOR VPN</li></a>
-            <a href="#vpn3"><li>AGREGAR UN NUEVO CLIENTE </li></a>
-            <a href="#vpn4"><li>CONECTAR UN CLIENTE CON LA VPN </li></a>
+            <a href="#vpn3"><li>DESCARGAR ARCHIVO .OVPN</li></a>
+            <a href="#vpn4"><li>AGREGAR UN NUEVO CLIENTE </li></a><a href="#vpn5"><li>CONECTAR UN CLIENTE CON LA VPN </li></a>
         </ol>
     </li>
 </ol>
@@ -190,16 +190,68 @@ Selecionaremos el protocolo UDP colocando 1 y daremos Enter.
 ![vpn_3](./Imagenes/vpn/vpn_3.png)
 
 Estableceremo el puerto 1194 y daremos enter.  
+
 ![vpn_4](./Imagenes/vpn/vpn_4.png)
 
-Seleccionaremos como DNS a Google colocando 3 y daremos enter.
+Seleccionaremos como DNS a Google colocando 3 y daremos enter.  
+
 ![vpn_5](./Imagenes/vpn/vpn_5.png)
 
 Finalemente nos pedirá Ingresar el nombre de nuestro primer cliente.  
+
 ![vpn_6](./Imagenes/vpn/vpn_6.png)
 
 Nos mostrará la ubicación de donde se ha generado la llave para que nuestro cliente se pueda conectar con la VPN.  
+
 ![vpn_7](./Imagenes/vpn/vpn_7.png)
 
 
-### <div id="vpn2"> 4.2 CREAR EL SERVIDOR VPN </div>
+### <div id="vpn3"> 4.3 DESCARGAR ARCHIVO .OVPN </div>
+
+Descargamos el archivo que nos generó dando click en la tuerca y seleccionamos la opción de “Descargar Archivo”.  
+
+![vpn_8](./Imagenes/vpn/vpn_8.png)
+
+Nos abre una ventana en la cual ingresamos, sin colocar espacios, la ubicación en donde se ha generado el archivo.  
+
+![vpn_9](./Imagenes/vpn/vpn_9.png)  
+
+![vpn_10](./Imagenes/vpn/vpn_10.png)  
+
+
+### <div id="vpn4"> 4.4 AGREGAR UN NUEVO CLIENTE  </div>
+
+Ingresar nuevamente el comando en la consola.  
+
+~~~
+sudo bash openvpn-install.sh
+~~~
+
+Seleccionar la opción (1).  
+
+![vpn_11](./Imagenes/vpn/vpn_11.png) 
+
+Ingresar el nombre del nuevo cliente.  
+
+![vpn_12](./Imagenes/vpn/vpn_12.png) 
+
+Descargar nuevamente el archivo .ovpn generado.  
+
+
+### <div id="vpn5"> 4.5 CONECTAR UN CLIENTE CON LA VPN </div>
+
+Abriremos es sofrware OpenVPN Connect instalado en nuestro cliente.  
+
+![vpn_13](./Imagenes/vpn/vpn_13.png)
+
+Iremos al apartado File e importaremos el archivo .ovpn.  
+
+![vpn_14](./Imagenes/vpn/vpn_14.png)
+
+Esperaremos a que se conecte con la VPN.  
+
+![vpn_15](./Imagenes/vpn/vpn_15.png)
+
+Y finalmente estaremos conectados con nuestra VPN.  
+
+![vpn_16](./Imagenes/vpn/vpn_16.png)
