@@ -4,19 +4,19 @@
 <ol> 
     <li><a href="#info">ANTES DE EMPEZA
         <ol>
-            <a href="#info1"><li value=1>1 SOFWARE NECESARIO</li></a>
-            <a href="#info2"><li value=1>2 GOOGLE CLUD PLATFORM </li></a>
+            <a href="#info1"><li value="1">1 SOFWARE NECESARIO</li></a>
+            <a href="#info2"><li value="1">2 GOOGLE CLUD PLATFORM </li></a>
         </ol>
     <li><a href="#firewall"> REGLAS DE FIREWALL </a> 
         <ol>
-            <a href="#firewall1"><li value=2>1 REGLAS DE ENTRADA </li></a>
-            <a href="#firewall2"><li value=2>2 REGLAS DE SALIDA </li></a>
+            <a href="#firewall1"><li value="2">1 REGLAS DE ENTRADA </li></a>
+            <a href="#firewall2"><li value="2">2 REGLAS DE SALIDA </li></a>
         </ol>
     </li>
     <li><a href="#mv"> MÁQUINA VIRTUAL (GCP)</a> 
         <ol>
-            <a href="#firewall"><li value=3>1 REGLAS DE ENTRADA </li></a>
-            <a href="#firewall"><li value=3>2 REGLAS DE SALIDA </li></a>
+            <a href="#firewall"><li value="3">1 REGLAS DE ENTRADA </li></a>
+            <a href="#firewall"><li value="3">2 REGLAS DE SALIDA </li></a>
         </ol>
     </li>
     <li><a href="#vpn"> CONFIGURACIÓN VPN </a> 
