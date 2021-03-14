@@ -9,8 +9,9 @@
         </ol>
     <li><a href="#firewall"> REGLAS DE FIREWALL </a> 
         <ol>
-            <a href="#firewall1"><li>REGLAS DE ENTRADA </li></a>
-            <a href="#firewall2"><li>REGLAS DE SALIDA </li></a>
+            <a href="#firewall1"><li>CARGAR NUEVA REGLA DE FIRE WALL</li></a>
+            <a href="#firewall2"><li>REGLAS DE ENTRADA </li></a>
+            <a href="#firewall3"><li>REGLAS DE SALIDA </li></a>
         </ol>
     </li>
     <li><a href="#mv"> MÁQUINA VIRTUAL (GCP)</a> 
@@ -44,22 +45,22 @@ OpenVPN Connect es conpatible con:
 - Iphon
 
 ### <div id="info2"> 1.2 GOOGLE CLUD PLATFORM </div>
-Es necesario de una cuenta activa en Google para poder registrarse en Google Cloud Platform  
-Google Cloud Platformm ofrece una capa gratuita, tras haber registrado una targeta de débito o crédito, la cual ofrece $300 como crédito y 3 meses de esta capa gratuita  
-El servidor VPN se levantó sobre la capa gratuita que proporciona Google Cloud Platform  
+Es necesario de una cuenta activa en Google para poder registrarse en Google Cloud Platform. Google Cloud Platformm ofrece una capa gratuita, tras haber registrado una targeta de débito o crédito, la cual ofrece $300 como crédito y 3 meses de tiempo límite para ocupar la capa gratuita.  
+El servidor VPN se levantó sobre la capa gratuita que proporciona Google Cloud Platform.  
 
 
-<div id="firewall">
 
-## 2. REGLAS DE FIREWALL
-</div>
 
-<div id="mv">
+## <div id="firewall"> 2. REGLAS DE FIREWALL </div>
+Buscaremos al apartado de 'Red de VPC' -> 'Firewall' para agregar las nuevas reglas.
 
-## 3. CREACIÓN DE UNA MÁQUINA VIRUTAL
-</div>
+![firewall_1](./Imagenes/vpn_gcp/firewall_1.png){width='100px'}
 
-<div id="vpn">
 
-### 4. INSTALACIÓN DE VPN
-</div>
+
+## <div id="mv"> 3. CREACIÓN DE UNA MÁQUINA VIRUTAL </div>
+
+
+
+
+### <div id="vpn"> 4. INSTALACIÓN DE VPN </div>
