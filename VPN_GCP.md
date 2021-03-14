@@ -19,7 +19,7 @@
             <a href="#vm1"><li>CREAR UNA NUEVA INSTANCIA </li></a>
         </ol>
     </li>
-    <li><a href="#vpn"> CONFIGURACIÓN VPN </a> 
+    <li><a href="#vpn"> INSTALACIÓN DE VPN </a> 
         <ol>
             <a href="#vpn1"><li>CONEXIÓN CON LA MÁQUINA VIRTUAL</li></a>
             <a href="#vpn2"><li>CREAR EL SERVIDOR VPN</li></a>
