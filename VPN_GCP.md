@@ -122,5 +122,28 @@ Seleccionaremos la opción 'Crear instancia' para crear una nueva Instancia de u
 
 ![vm_2](./Imagenes/vm/vm_2.png)
 
+Ingresaremos el nombre de nuestra nueva Instancia (en esta practica a modo de ejmplo se colocó de nombre 'vpn-ubuntu').  
+Tambien se puende configurar Etiquetas y configurar la Región y la Zona.  
+
+![vm_3](./Imagenes/vm/vm_3.png)
+
+
+También se puede configurar la máquina en 'Configuración de la máquina', se puede configurar la CPU y la memoria (a fines de esta práctica basta con los valores por defecto para poder ejecutar el servidor de la VPN).  
+
+![vm_4](./Imagenes/vm/vm_4.png)
+
+El Sistema Operativo se estableció con Ubuntu 18.04 LTS.  
+
+![vm_5](./Imagenes/vm/vm_5.png)
+
+Seleccionaremos el apartado de 'Administración, seguridad, discos, roles, redes, usuario único' para aplicar nuestras reglas del firewal.  
+
+![vm_6](./Imagenes/vm/vm_6.png)
+
+Aplicaremos nuestras reglas en la pestaña 'Herramientas de red'->'Etiquetas de red' en la cual colocaremos la etiqueta que establecimos para nuestras reglas de entrada y salida.
+
+![vm_7](./Imagenes/vm/vm_7.png)
+
+Por ultimo daremos click en la opción 'Crear' para crear nuestra nueva Instancia.
 
 ## <div id="vpn"> 4. INSTALACIÓN DE VPN </div>
